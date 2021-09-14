@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title> Webscrapper NASA </title>
+    </head>
+    <body>
+        <h1> {{head}} </h1>
+        <img src="static/downloads/potd_nasa.jpg" style="max-width: 100%; height: auto">
+        <h1> Last 5 days: </h1>
+        <ol>
+            {%for num in range(5)%}
+            <img src={{"static/downloads/yesterday_potd_" ~ (num+1) ~  ".jpg"}}
+                 style="max-width: 80%; height: auto">
+            {%endfor%}
+        </ol>
+    </body>
+</html>
